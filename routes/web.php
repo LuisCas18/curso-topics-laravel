@@ -4,7 +4,5 @@ use App\Http\Controllers\CourseTopicController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('course-topics.index');
 });
-
-Route::resource('course-topics', CourseTopicController::class);
