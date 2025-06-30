@@ -1,61 +1,51 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🧩 Módulo CRUD - Temas de Curso (Course Topics)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este proyecto implementa un mini módulo para administrar **Temas de Curso**, cumpliendo con los requisitos de la prueba técnica.
 
-## About Laravel
+## 🛠️ Requisitos cumplidos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- [x] Se creó la tabla `course_topics` en MySQL.
+- [x] Se implementó un CRUD funcional usando Laravel como API REST.
+- [x] Se desarrolló una vista con TailwindCSS para listar, crear, editar y eliminar temas.
+- [x] Se implementaron validaciones básicas del lado del servidor.
+- [x] Las operaciones de eliminación se hacen usando AJAX (sin recargar la página).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📁 Estructura
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- `resources/views/course-topics/index.blade.php`: Vista principal.
+- `resources/js/course-topics.js`: Para consumir la API y manejar el DOM.
+- `app/Http/Controllers/CourseTopicController.php`: Controlador RESTful.
+- `routes/api.php`: Rutas para el API.
+- `routes/web.php`: Ruta que carga la vista.
 
-## Learning Laravel
+## 🚀 Cómo ejecutar
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clona el repositorio y configura el archivo `.env` con tus credenciales de base de datos.
+2. Ejecuta migraciones o importa `courses_topics.sql`.
+3. Levanta el servidor con `php artisan serve`.
+4. Accede a `http://127.0.0.1:8000` para comenzar.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 📘 Descripción de la ejecución de la prueba
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Se diseñó y creó la tabla course_topics en MySQL mediante migraciones de Laravel.
+2. Se implementó un CRUD funcional con Laravel como API REST, incluyendo validaciones básicas del lado del servidor.
+3. Se desarrolló una interfaz básica utilizando Blade y Tailwind CSS 4 para listar, crear, editar y eliminar temas.
+4. Se utilizó JavaScript con fetch() para realizar peticiones AJAX, evitando recargar la página.
+5. Se realizaron pruebas funcionales manuales para asegurar que todo el flujo operara correctamente.
+6. Finalmente, se preparó el archivo .sql con la tabla y datos de ejemplo, y se documentó el proceso en este archivo README.md.
 
-## Laravel Sponsors
+## ⏱️ Tiempo estimado
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Etapa                            | Tiempo invertido |
+|----------------------------------|------------------|
+| Instalación base de Laravel 12   | 10 minutos       |
+| Modelo y migración CourseTopics  | 10 minutos       |
+| Rutas y controlador REST         | 10 minutos       |
+| CRUD con validaciones            | 15 minutos       |
+| Frontend con TailwindCSS         | 20 minutos       |
+| Lógica AJAX e integración final  | 20 minutos       |
+| **Total aproximado**             | **1 hora 25 min** |
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+✅ Revisión completa del módulo: funcional, validado y documentado.
