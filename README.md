@@ -21,9 +21,18 @@ Este proyecto implementa un mini módulo para administrar **Temas de Curso**, cu
 ## 🚀 Cómo ejecutar
 
 1. Clona el repositorio y configura el archivo `.env` con tus credenciales de base de datos.
-2. Ejecuta migraciones o importa `courses_topics.sql`.
-3. Levanta el servidor con `php artisan serve`.
-4. Accede a `http://127.0.0.1:8000` para comenzar.
+2. Instala dependencias de PHP con `composer install`.
+3. Instala dependencias de frontend con `npm install`.
+4. Compila los assets con Vite usando `npm run build` o `npm run dev`.
+5. Ejecuta migraciones con `php artisan migrate` o importa `courses_topics.sql`.
+6. Genera la clave de aplicación con: `php artisan key:generate`
+7. Levanta el servidor con `php artisan serve`.
+8. Accede a `http://127.0.0.1:8000` para comenzar.
+
+## ⚙️ Notas importantes y actualización
+
+> ⚠️ Este proyecto usa **Vite** para la compilación de assets.  
+> Es necesario ejecutar `npm run build` para generar el archivo `manifest.json` y evitar errores como: Unable to locate file in Vite manifest: resources/js/course-topics.js
 
 ## 📘 Descripción de la ejecución de la prueba
 
